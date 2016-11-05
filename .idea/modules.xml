@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jaus.iml" filepath="$PROJECT_DIR$/.idea/modules/jaus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jaus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jaus_main.iml" group="jaus" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jaus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jaus_test.iml" group="jaus" />
+    </modules>
+  </component>
+</project>
