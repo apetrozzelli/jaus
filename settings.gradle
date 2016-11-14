@@ -1,1 +1,3 @@
 rootProject.name = 'jaus'
+include 'jauslib', 'jauscli'
+

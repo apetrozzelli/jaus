@@ -29,6 +29,12 @@
       <module name="jaus" target="1.5" />
       <module name="jaus_main" target="1.8" />
       <module name="jaus_test" target="1.8" />
+      <module name="jausCLI_main" target="1.8" />
+      <module name="jauscli_main" target="1.8" />
+      <module name="jauscli_test" target="1.8" />
+      <module name="jausCLI_test" target="1.8" />
+      <module name="jauslib_main" target="1.8" />
+      <module name="jauslib_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

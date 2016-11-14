@@ -5,7 +5,7 @@ apply plugin: 'project-report'
 group = 'me.alessandropetrozzelli'
 version = '1.0-SNAPSHOT'
 
-description = """jaus"""
+description = "The jaus library"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
