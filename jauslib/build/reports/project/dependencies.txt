@@ -1,0 +1,54 @@
+
+------------------------------------------------------------
+Project :jauslib - The jaus library
+------------------------------------------------------------
+
+archives - Configuration for archive artifacts.
+No dependencies
+
+compile - Dependencies for source set 'main'.
+No dependencies
+
+compileClasspath - Compile classpath for source set 'main'.
+No dependencies
+
+compileOnly - Compile dependencies for source set 'main'.
+No dependencies
+
+default - Configuration for default artifacts.
+No dependencies
+
+runtime - Runtime dependencies for source set 'main'.
+No dependencies
+
+testCompile - Dependencies for source set 'test'.
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.1+ -> 2.1.0
+     +--- net.bytebuddy:byte-buddy:1.4.26
+     +--- net.bytebuddy:byte-buddy-agent:1.4.26
+     \--- org.objenesis:objenesis:2.4
+
+testCompileClasspath - Compile classpath for source set 'test'.
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.1+ -> 2.1.0
+     +--- net.bytebuddy:byte-buddy:1.4.26
+     +--- net.bytebuddy:byte-buddy-agent:1.4.26
+     \--- org.objenesis:objenesis:2.4
+
+testCompileOnly - Compile dependencies for source set 'test'.
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.1+ -> 2.1.0
+     +--- net.bytebuddy:byte-buddy:1.4.26
+     +--- net.bytebuddy:byte-buddy-agent:1.4.26
+     \--- org.objenesis:objenesis:2.4
+
+testRuntime - Runtime dependencies for source set 'test'.
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.1+ -> 2.1.0
+     +--- net.bytebuddy:byte-buddy:1.4.26
+     +--- net.bytebuddy:byte-buddy-agent:1.4.26
+     \--- org.objenesis:objenesis:2.4

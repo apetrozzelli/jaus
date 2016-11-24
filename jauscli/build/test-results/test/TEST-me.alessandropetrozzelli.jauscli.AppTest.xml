@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="me.alessandropetrozzelli.jauscli.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-24T23:19:36" hostname="U-PT929-ubuntu" time="0.003">
+  <properties/>
+  <testcase name="testApp" classname="me.alessandropetrozzelli.jauscli.AppTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
