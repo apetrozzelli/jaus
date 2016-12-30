@@ -1,4 +1,5 @@
 package me.alessandropetrozzelli.jaus;
 
-class Guest {
+public interface Guest {
+    Location getLocation();
 }
