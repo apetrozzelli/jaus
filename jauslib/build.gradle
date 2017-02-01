@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'project-report'
+apply plugin: 'jdepend'
 
 group = 'me.alessandropetrozzelli'
 version = '1.0-SNAPSHOT'

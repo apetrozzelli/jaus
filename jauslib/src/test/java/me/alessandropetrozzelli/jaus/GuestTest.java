@@ -11,7 +11,7 @@ public class GuestTest {
 
     @Test
     public void aGuestHasALocation() {
-        GuestImpl sut = new GuestImpl(new Location());
+        GuestImpl sut = new GuestImpl(() -> new Location());
         Location p = sut.getLocation();
         assertNotNull(p);
     }

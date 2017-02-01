@@ -11,9 +11,9 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class UniverseTest {
+public class WorldTest {
 
-    private Universe sut;
+    private World sut;
 
     @Mock
     private Guest aGuest;
@@ -26,41 +26,41 @@ public class UniverseTest {
 
     @Before
     public void setUp() throws Exception {
-        sut = new Universe();
+        sut = new World(new IdentityBasedMap());
         when(aGuest.getLocation()).thenReturn(aLocation);
         when(anotherGuest.getLocation()).thenReturn(anotherLocation);
     }
 
     @Test
-    public void anUniverseDefaultsToEmpty() {
+    public void aWorldDefaultsToEmpty() {
         assertTrue(sut.isEmpty());
     }
 
     @Test
-    public void anUniverseRejectsNullGuests() throws UniverseException {
+    public void aWorldRejectsNullGuests() throws UniverseException {
         assertFalse(sut.addGuest(() -> null));
     }
 
     @Test
-    public void anUniverseCanHostAGuest() throws UniverseException {
+    public void aWorldCanHostAGuest() throws UniverseException {
         assertTrue(sut.addGuest(() -> aGuest));
     }
 
     @Test
-    public void anUniverseIsNotEmptyOnceAGuestHasBeenAdded() throws UniverseException {
+    public void aWorldIsNotEmptyOnceAGuestHasBeenAdded() throws UniverseException {
         assertTrue(sut.addGuest(() -> aGuest));
         assertFalse(sut.isEmpty());
     }
 
     @Test
-    public void anUniverseCanHostDistinctGuests() throws UniverseException {
+    public void aWorldCanHostDistinctGuests() throws UniverseException {
         assertTrue(sut.addGuest(() -> aGuest));
         assertTrue(sut.addGuest(() -> anotherGuest));
-        assertTrue(sut.addGuest(() -> new GuestImpl(new Location())));
+        assertTrue(sut.addGuest(() -> new GuestImpl(() -> new Location())));
     }
 
     @Test(expected = LocationNotFreeException.class)
-    public void aGuestLocationMustBeUnique() throws UniverseException {
+    public void aGuestLocationMustBeUniqueWithinAWorld() throws UniverseException {
         Location l = new Location();
         when(aGuest.getLocation()).thenReturn(l);
         sut.addGuest(() -> aGuest);
