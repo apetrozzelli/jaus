@@ -1,15 +1,15 @@
 package me.alessandropetrozzelli.jaus;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import java.lang.UnsupportedOperationException;
 
 public class SquareMap implements WorldMap {
     @Override
     public boolean isEmpty() {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean add(Guest guest) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 }
