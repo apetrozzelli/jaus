@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple jauscli.
+ * Unit test for simple CommandLineInterface.
  */
 public class AppTest
         extends TestCase {

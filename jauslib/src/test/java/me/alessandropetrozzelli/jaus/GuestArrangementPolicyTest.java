@@ -3,7 +3,7 @@ package me.alessandropetrozzelli.jaus;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertNotNull;
 public class GuestArrangementPolicyTest {
 
     @Mock
-    WorldMap world;
+    private WorldMap world;
 
     @Test
     public void defaultPolicyExists() {

@@ -2,16 +2,23 @@ package me.alessandropetrozzelli.jaus;
 
 import java.util.function.Supplier;
 
-class GuestImpl implements Guest {
-    private Location location;
+public class GuestImpl implements Guest {
     private Location currentLocation;
 
-    GuestImpl(final Supplier<Location> initialLocation) {
+    public GuestImpl(final Supplier<Location> initialLocation) {
         currentLocation = initialLocation.get();
     }
 
     public Location getLocation() {
         return currentLocation;
+    }
+
+    @Override
+    public void moveTo(Location newLocation) throws InvalidLocationException {
+        if (newLocation == null) {
+            throw new InvalidLocationException(newLocation);
+        }
+        currentLocation = newLocation;
     }
 
 }

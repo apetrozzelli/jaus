@@ -2,15 +2,15 @@ package me.alessandropetrozzelli.jaus;
 
 import java.util.function.Supplier;
 
-class World {
+public class World {
 
     private final WorldMap map;
 
-    World(WorldMap map) {
+    public World(WorldMap map) {
         this.map = map;
     }
 
-    public boolean isEmpty() {
+    boolean isEmpty() {
         return map.isEmpty();
     }
 
