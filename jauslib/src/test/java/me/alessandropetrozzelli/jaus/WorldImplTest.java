@@ -11,9 +11,9 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class WorldTest {
+public class WorldImplTest {
 
-    private World sut;
+    private WorldImpl sut;
 
     @Mock
     private Guest aGuest;
@@ -26,7 +26,7 @@ public class WorldTest {
 
     @Before
     public void setUp() throws Exception {
-        sut = new World(new IdentityBasedMap());
+        sut = new WorldImpl(new IdentityBasedMap());
         when(aGuest.getLocation()).thenReturn(aLocation);
         when(anotherGuest.getLocation()).thenReturn(anotherLocation);
     }

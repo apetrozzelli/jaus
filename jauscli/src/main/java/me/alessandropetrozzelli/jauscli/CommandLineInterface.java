@@ -9,20 +9,21 @@ import java.util.function.Supplier;
 public class CommandLineInterface {
     public static void main(String[] args) throws InvalidLocationException, LocationNotFreeException {
         System.out.println("Initializing jaus...");
-        final List<Guest> guests = new ArrayList<>();
 
-        Universe u = new Universe();
+        Universe u = new Universe(new StaticClock());
         WorldMap worldMap = new IdentityBasedMap();
-        World w = new World(worldMap);
+        WorldImpl w = new WorldImpl(worldMap);
         u.addWorld("myWorld", w);
+
+        final List<Guest> guests = new ArrayList<>();
         Supplier<Guest> g = () -> {
             GuestImpl guest = new GuestImpl(GuestArrangementPolicy.getDefaultLocationSupplier(worldMap));
             guests.add(guest);
             return guest;
         };
-        for (int i = 0; i < 10; i++) {
-            w.addGuest(g);
-        }
+
+        int numberOfGuests = 10;
+        w.addGuests(g, numberOfGuests);
 
         for (Guest guest : guests) {
             guest.moveTo(GuestArrangementPolicy.getDefaultLocationSupplier(worldMap).get());

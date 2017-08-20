@@ -3,6 +3,10 @@ package me.alessandropetrozzelli.jaus;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * The simplest {@link WorldMap} implementation as it just refuses a {@link Guest} with a null {@link Location}
+ * or whose {@link Location} is not free.
+ */
 public class IdentityBasedMap implements WorldMap {
 
     private final Set<Guest> guests = new HashSet<>();

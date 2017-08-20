@@ -12,10 +12,12 @@ public class UniverseTest {
 
     @Mock
     private World firstWorld;
+    @Mock
+    private Clock clock;
 
     @Test
     public void anUniverseDefaultsToEmpty() {
-        Universe sut = new Universe();
+        Universe sut = new Universe(clock);
         assertNotNull(sut);
 
         assertTrue(sut.isEmpty());
@@ -23,7 +25,7 @@ public class UniverseTest {
 
     @Test
     public void anUniverseCanHostAWorld() {
-        Universe sut = new Universe();
+        Universe sut = new Universe(clock);
         sut.addWorld("firstWorld", firstWorld);
 
         assertFalse(sut.isEmpty());
