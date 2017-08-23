@@ -34,6 +34,7 @@ public class ConwayGameOfLifeWorldMapTest {
     @Test
     public void aGameOfLifeCanHostAGuest() throws InvalidLocationException, LocationNotFreeException {
         assertTrue(sut.add(g));
+        assertFalse(sut.isEmpty());
     }
 
     @Test

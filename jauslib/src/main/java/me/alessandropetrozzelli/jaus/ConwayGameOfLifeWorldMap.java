@@ -10,7 +10,7 @@ public class ConwayGameOfLifeWorldMap implements WorldMap {
 
     @Override
     public boolean isEmpty() {
-        return true;
+        return guests.isEmpty();
     }
 
     @Override
