@@ -17,6 +17,8 @@
       <module name="jauscli_test" target="1.8" />
       <module name="jauslib_main" target="1.8" />
       <module name="jauslib_test" target="1.8" />
+      <module name="jausweb-vaadin_main" target="1.8" />
+      <module name="jausweb-vaadin_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

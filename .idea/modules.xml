@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jauslib/jauslib.iml" filepath="$PROJECT_DIR$/.idea/modules/jauslib/jauslib.iml" group="jauslib" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jauslib/jauslib_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jauslib/jauslib_main.iml" group="jauslib" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jauslib/jauslib_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jauslib/jauslib_test.iml" group="jauslib" />
+      <module fileurl="file://$PROJECT_DIR$/jausweb-vaadin/jausweb-vaadin.iml" filepath="$PROJECT_DIR$/jausweb-vaadin/jausweb-vaadin.iml" group="jausweb-vaadin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jausweb-vaadin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jausweb-vaadin_main.iml" group="jausweb-vaadin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jausweb-vaadin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jausweb-vaadin_test.iml" group="jausweb-vaadin" />
     </modules>
   </component>
 </project>
