@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../../../jauscli">
       <excludeFolder url="file://$MODULE_DIR$/../../../jauscli/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../jauscli/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../jauscli/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
