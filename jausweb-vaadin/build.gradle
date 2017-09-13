@@ -22,7 +22,7 @@ apply plugin: 'io.spring.dependency-management'
 group = 'me.alessandropetrozzelli'
 version = '1.0-SNAPSHOT'
 
-description = "The jaus library"
+description = "The jaus Vaadin web UI"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -43,6 +43,7 @@ ext {
 dependencies {
 	compile project(':jauslib')
 	compile('com.vaadin:vaadin-spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-devtools')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
