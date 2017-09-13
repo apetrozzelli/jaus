@@ -18,7 +18,7 @@ public class JauswebVaadinApplication {
     }
 
     @Service
-    public static class MyService {
+    public class MyService {
         public String sayHi() {
             return "Hello Jaus!";
         }
@@ -27,7 +27,7 @@ public class JauswebVaadinApplication {
 
     @Theme("valo")
     @SpringUI(path = "")
-    public static class VaadinUI extends UI {
+    public class VaadinUI extends UI {
 
         @Autowired
         MyService myService;
@@ -36,6 +36,24 @@ public class JauswebVaadinApplication {
         protected void init(VaadinRequest request) {
             setContent(new Label(myService.sayHi()));
         }
+
+    }
+
+    @Theme("valo")
+    @SpringUI(path = "/2")
+    public class FirstVerticalUI extends UI {
+
+        @Autowired
+        MyService myService;
+
+        @Override
+        protected void init(VaadinRequest request) {
+            setContent(new FirstVaadinViewDesignBased());
+        }
+
+    }
+
+    public class FirstVaadinViewDesignBased extends FirstVaadinDesign {
 
     }
 }
