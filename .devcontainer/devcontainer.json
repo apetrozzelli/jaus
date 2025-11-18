@@ -1,0 +1,22 @@
+{
+  "name": "Jaus Devcontainer (Temurin 17)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "redhat.java"
+      ]
+    }
+  },
+  "postCreateCommand": "mvn -v || true",
+  "remoteUser": "root"
+}
