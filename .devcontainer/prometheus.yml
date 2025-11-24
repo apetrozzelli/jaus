@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# Scraping endpoints go here
+scrape_configs:
+#  - job_name: "jaus"
+#    scrape_interval: 5s
+#    static_configs:
+#      - targets: ["jaus_devcontainer-dev-container-1:8085"]
+  - job_name: "tempo"
+    static_configs:
+      - targets: ["tempo:3200"]
+  - job_name: "tempo-usage-metrics"
+    metrics_path: "/usage_metrics"
+    static_configs:
+      - targets: ["tempo:3200"]

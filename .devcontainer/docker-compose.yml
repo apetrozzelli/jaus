@@ -1,0 +1,27 @@
+include:
+  - docker-compose.dev.env.yml
+  - docker-compose.dev.env.ui.yml
+  - docker-compose.dev.env.monitoring.yml
+services:
+  dev-container:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    volumes:
+      # Mounts the project folder to '/workspace'. While this file is in .devcontainer,
+      # mounts are relative to the first file in the list, which is a level up.
+      - ../:/workspace:cached
+
+    # [Optional] Required for ptrace-based debuggers like C++, Go, and Rust
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+    # Overrides default command so things don't shut down after the process ends.
+    #command: /bin/sh -c "while sleep 1000; do :; done"
+    command: sleep infinity
+    networks:
+      - jaus_network
+
+networks:
+  jaus_network:
+    external: false

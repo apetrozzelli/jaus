@@ -1,22 +1,56 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
 {
-  "name": "Jaus Devcontainer (Temurin 17)",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
-  "workspaceFolder": "/workspace",
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-      },
-      "extensions": [
-        "vscjava.vscode-java-pack",
-        "vscjava.vscode-maven",
-        "redhat.java"
-      ]
-    }
-  },
-  "postCreateCommand": "mvn -v || true",
-  "remoteUser": "root"
+	"name": "jaus-development",
+	//"image": "mcr.microsoft.com/devcontainers/base:bookworm",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": [
+		"docker-compose.yml",
+		"docker-compose.dev.env.yml",
+		"docker-compose.dev.env.ui.yml",
+		"docker-compose.dev.env.monitoring.yml"
+	],
+	"service": "dev-container",
+	"workspaceFolder": "/workspace",
+	"features": {
+		"ghcr.io/devcontainers/features/git-lfs:1": {},
+		"ghcr.io/devcontainers-extra/features/maven-sdkman:2": {
+			"jdkVersion": "25",
+			"jdkDistro": "tem"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"version": "3.10"
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		"ghcr.io/devcontainers-extra/features/devcontainers-cli:1": {},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			"version": "latest",
+			"helm": "latest",
+			"minikube": "latest"
+		},
+		"ghcr.io/devcontainers/features/terraform:1": {}
+	}
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// More info: https://aka.ms/dev-containers-non-root.
+	,
+	"remoteUser": "vscode"
+	// Configure tool-specific properties.
+	,
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-containers",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"ms-kubernetes-tools.kind-vscode"
+			],
+			"settings": {}
+		}
+	},
+	//"postCreateCommand": "[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64",
+	"remoteEnv": {
+		// Pass in the host directory for Docker mount commands from inside the container
+		// see https://code.visualstudio.com/remote/advancedcontainers/use-docker-kubernetes#_mounting-host-volumes-with-docker-from-inside-a-container
+		"HOST_PROJECT_PATH": "${localWorkspaceFolder}"
+	}
 }
