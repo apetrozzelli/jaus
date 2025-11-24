@@ -1,0 +1,16 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "Jaus pre-defined DB servers",
+            "Group": "JAUS DBs",
+            "Port": 5432,
+            "Host": "postgres",
+            "Username": "postgres",
+            "MaintenanceDB": "postgres",
+            "ConnectionParameters": {
+                "sslmode": "prefer",
+                "connect_timeout": 10
+            }
+        }
+    }
+}
