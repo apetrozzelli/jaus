@@ -8,8 +8,7 @@
 
 name: Java CI with Maven
 permissions:
-  contents: read
-  security-events: write  # For uploading code scanning results
+  contents: write
 
 on:
   push:
